@@ -74,6 +74,14 @@
                 }
             });
 
+            /* 2.退出登录 */
+            $('.logout').click(function(){
+                //2.1 删除locolstorage中的token
+                localStorage.removeItem('token');
+                //2.2 跳转登录页面
+                window.location.href = './login.html';
+            });
+
             // //(1).实例化ajax对象
             // var xhr = new XMLHttpRequest();
             // //(2).设置请求方法和地址
